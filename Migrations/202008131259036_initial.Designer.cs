@@ -13,7 +13,7 @@ namespace FindTutor.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008131055216_initial"; }
+            get { return "202008131259036_initial"; }
         }
         
         string IMigrationMetadata.Source

@@ -8,10 +8,10 @@ namespace FindTutor.Models
 {
     public class DatabaseDB : DbContext
     {
-        public DbSet<Customer> Customers;
-        public DbSet<Announcement> Announcements;
-        public DbSet<Review> Reviews;
-        public DbSet<Tutor> Tutors;
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Announcement> Announcements { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Tutor> Tutors { get; set; }
 
 
         public DatabaseDB()
