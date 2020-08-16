@@ -32,8 +32,8 @@
             "scripts": [
               "src/zone.js",
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/angular2-counto/src/counto.module.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/angular2-counto/src/counto.module.js"
             ]
           },
           "configurations": {
