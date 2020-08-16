@@ -19,8 +19,11 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "angular2-counto": "^1.2.5",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.2",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "jquery-datetimepicker": "^2.5.21",
     "jquery-migrate": "^3.3.1",
@@ -35,7 +38,7 @@
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1000.3",
+    "@angular-devkit/build-angular": "^0.1000.6",
     "@angular/cli": "~10.0.3",
     "@angular/compiler-cli": "~10.0.4",
     "@types/jasmine": "~3.5.0",

@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'NajdiTutorAngular';
   model: Customer;
   newCustomer: Customer
+
   constructor(private http:HttpClient, private route:ActivatedRoute){}
   url = "https://localhost:44336/api/Customers/2"
 
