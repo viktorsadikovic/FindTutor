@@ -11,6 +11,8 @@ import { CountoModule } from 'angular2-counto';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesMainComponent } from './categories-main/categories-main.component'
+import { AccordionAllModule} from '@syncfusion/ej2-angular-navigations';
+import { SingleCategoryComponent } from './single-category/single-category.component'
 
 
 @NgModule({
@@ -20,13 +22,15 @@ import { CategoriesMainComponent } from './categories-main/categories-main.compo
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    CategoriesMainComponent
+    CategoriesMainComponent,
+    SingleCategoryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    CountoModule
+    CountoModule,
+    AccordionAllModule
   ],
   providers: [],
   bootstrap: [AppComponent]
