@@ -1,0 +1,45 @@
+<div class="container">
+  <ejs-accordion expandMode='Multiple'>
+    <e-accordionitems>
+      <e-accordionitem>
+        <ng-template #header>
+          <h3>Beginner</h3>
+        </ng-template>
+        <ng-template #content class="accordion-main">
+          <div class="aooo">
+
+            <app-announcement-thumbnail [niza]="beginners"></app-announcement-thumbnail>
+
+              <p></p>
+            </div>
+        </ng-template>
+      </e-accordionitem>
+      <e-accordionitem>
+        <ng-template #header>
+          <h3>Intermediate</h3>
+        </ng-template>
+        <ng-template #content class="accordion-main">
+          <div class="aooo">
+
+            <app-announcement-thumbnail [niza]="intermediates"></app-announcement-thumbnail>
+
+              <p></p>
+            </div>
+        </ng-template>
+      </e-accordionitem>
+      <e-accordionitem>
+        <ng-template #header>
+          <h3>Advanced</h3>
+        </ng-template>
+        <ng-template #content>
+
+          <app-announcement-thumbnail [niza]="advanceds"></app-announcement-thumbnail>
+
+          <p></p>
+        </ng-template>
+      </e-accordionitem>
+    </e-accordionitems>
+  </ejs-accordion>
+
+ </div>
+

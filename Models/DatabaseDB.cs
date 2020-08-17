@@ -14,8 +14,9 @@ namespace FindTutor.Models
         public DbSet<Tutor> Tutors { get; set; }
 
 
-        public DatabaseDB()
+        public DatabaseDB() 
         {
+         
         }
 
         public static DatabaseDB Create()
