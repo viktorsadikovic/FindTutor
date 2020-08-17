@@ -11,10 +11,14 @@ import { CountoModule } from 'angular2-counto';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { AnnouncementThumbnailComponent } from './announcement-thumbnail/announcement-thumbnail.component'
+import { SingleCategoryComponent}  from './single-category/single-category.component'
+import { CategoriesMainComponent } from './categories-main/categories-main.component'
 import { RegisterComponent } from './register/register.component';
 import { RegisterTutorComponent } from './register-tutor/register-tutor.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AccordionAllModule } from '@syncfusion/ej2-angular-navigations'
 
 
 @NgModule({
@@ -24,6 +28,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    CategoriesMainComponent,
+    AnnouncementThumbnailComponent,
+    SingleCategoryComponent,
     LoginComponent,
     RegisterComponent,
     RegisterTutorComponent,
@@ -35,7 +42,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     RouterModule.forRoot(routes),
     CountoModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AccordionAllModule
   ],
   providers: [],
   bootstrap: [AppComponent]

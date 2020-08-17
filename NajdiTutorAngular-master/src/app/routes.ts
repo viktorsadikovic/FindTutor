@@ -3,11 +3,15 @@ import { TestComponent } from './test/test.component'
 import { HomeComponent } from './home/home.component'
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
+import { CategoriesMainComponent } from './categories-main/categories-main.component'
+import { SingleCategoryComponent } from './single-category/single-category.component'
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'test', component: TestComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'categories', component: CategoriesMainComponent },
+  { path: 'categories/foreignlanguages', component: SingleCategoryComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ]
