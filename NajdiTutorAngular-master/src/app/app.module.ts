@@ -9,7 +9,8 @@ import { routes } from './routes';
 import { NavbarComponent } from './navbar/navbar.component'
 import { CountoModule } from 'angular2-counto';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { CategoriesMainComponent } from './categories-main/categories-main.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component'
     TestComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CategoriesMainComponent
   ],
   imports: [
     BrowserModule,
