@@ -15,34 +15,43 @@ export class SingleCategoryComponent implements OnInit {
   beginners = [
     {Name: "Kurs po angliski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "150den"},
+    Cena: "150den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "300den"},
+    Cena: "300den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "400den"}
+    Cena: "400den",
+    Date: "01/02/2020"}
   ]
   intermediates = [
     {Name: "Kurs po francuski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "150den"},
+    Cena: "150den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Filip Spirovski",
-    Cena: "300den"},
+    Cena: "300den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "400den"}
+    Cena: "400den",
+    Date: "01/02/2020"}
   ]
   advanceds = [
     {Name: "Kurs po francuski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "150den"},
+    Cena: "150den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Filip Spirovski",
-    Cena: "300den"},
+    Cena: "300den",
+    Date: "01/02/2020"},
     {Name: "Kurs po angliski jazik",
     Tutor: "Viktor Sadikovic",
-    Cena: "400den"}
+    Cena: "400den",
+    Date: "01/02/2020"}
   ]
 }

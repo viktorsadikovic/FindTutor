@@ -12,7 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriesMainComponent } from './categories-main/categories-main.component'
 import { AccordionAllModule} from '@syncfusion/ej2-angular-navigations';
-import { SingleCategoryComponent } from './single-category/single-category.component'
+import { SingleCategoryComponent } from './single-category/single-category.component';
+import { AnnouncementThumbnailComponent } from './announcement-thumbnail/announcement-thumbnail.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SingleCategoryComponent } from './single-category/single-category.compo
     FooterComponent,
     HomeComponent,
     CategoriesMainComponent,
-    SingleCategoryComponent
+    SingleCategoryComponent,
+    AnnouncementThumbnailComponent
   ],
   imports: [
     BrowserModule,
