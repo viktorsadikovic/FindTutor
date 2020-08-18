@@ -11,14 +11,15 @@ import { CountoModule } from 'angular2-counto';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { AnnouncementThumbnailComponent } from './announcement-thumbnail/announcement-thumbnail.component'
-import { SingleCategoryComponent}  from './single-category/single-category.component'
-import { CategoriesMainComponent } from './categories-main/categories-main.component'
+import { AnnouncementThumbnailComponent } from './announcement-thumbnail/announcement-thumbnail.component';
+import { SingleCategoryComponent} from './single-category/single-category.component';
+import { CategoriesMainComponent } from './categories-main/categories-main.component';
 import { RegisterComponent } from './register/register.component';
 import { RegisterTutorComponent } from './register-tutor/register-tutor.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AccordionAllModule } from '@syncfusion/ej2-angular-navigations'
+import { AccordionAllModule } from '@syncfusion/ej2-angular-navigations';
+import { MidSectionHomepageComponent } from './mid-section-homepage/mid-section-homepage.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AccordionAllModule } from '@syncfusion/ej2-angular-navigations'
     LoginComponent,
     RegisterComponent,
     RegisterTutorComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    MidSectionHomepageComponent
   ],
   imports: [
     BrowserModule,

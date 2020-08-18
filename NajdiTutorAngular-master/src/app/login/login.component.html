@@ -4,9 +4,10 @@
         <div class="form-group" >
           <label for="exampleInputEmail1">Емаил</label>
           <input
-           required type="email"
+           required
+            type="email"
             class="form-control"
-             formControlName="email" s
+             formControlName="email" 
              [(ngModel)] ="email"
              placeholder="Внесете Емаил...">
           <small id="emailHelp" class="form-text text-muted">Вашиот е-маил нема да биде споделуван.</small>
@@ -16,6 +17,8 @@
           <input required type="password" class="form-control" formControlName="password"  placeholder="Внесете лозинка...">
         </div>
         <button type="submit" class="btn btn-primary custom-button">Најави се</button>
+        <small class="form-text text-muted">Сеуште немаш профил?<a href="" [routerLink]="['/register']">Регистрирај се тука!</a> </small>
+
       </form>
 
 </div>

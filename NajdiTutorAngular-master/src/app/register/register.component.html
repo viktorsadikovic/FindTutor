@@ -1,19 +1,19 @@
 <div class="container custom-container"> 
   <div class="row custom-class">
-      <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="col-sm-12 col-md-6 col-lg-6" >
        <a (click)="onClickCustomer()" [class.aktivna]= "customer">
         <div class="card customer">
-        <div class="card-body">
+        <div class="card-body" [ngClass]="{'aktivna' : customer}">
           <h5 class="card-title">Ученик</h5>
         </div>
       </div>
     </a>
     </div>
     
-    <div class="col-sm-6">
-      <a (click)="onClickTutor()" [class.aktivna] ="tutor" >
+    <div class="col-sm-6 col-lg-6 col-md-6" >
+      <a (click)="onClickTutor()" >
         <div class="card tutor">
-         <div class="card-body">
+         <div class="card-body" [ngClass]="{'aktivna' : tutor}">
           <h5 class="card-title">Тутор</h5>
         </div>
       </div>
@@ -53,6 +53,8 @@
         <label class="form-check-label" for="exampleCheck1">Дали се согласувате со нашите <a href="#">услови и барања</a>?</label>
       </div>
       <button type="submit" class="btn btn-primary custom-button">Регистрирај се</button>
+      <small class="form-text text-muted">Веќе имаш регистрирано профил?<a [routerLink]="['/login']">Најави се тука!</a> </small>
+
     </form>
 </div>
 
@@ -96,6 +98,8 @@
         <label class="form-check-label" for="exampleCheck1" >Дали се согласувате со нашите <a href="#">услови и барања</a>?</label>
       </div>
       <button type="submit" class="btn btn-primary custom-button">Регистрирај се</button>
+   
+      <small class="form-text text-muted">Веќе имаш регистрирано профил?<a [routerLink]="['/login']">Најави се тука!</a> </small>
     </form>
 </div>
 

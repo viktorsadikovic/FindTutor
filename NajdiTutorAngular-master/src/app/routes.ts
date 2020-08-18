@@ -5,12 +5,14 @@ import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './register/register.component'
 import { CategoriesMainComponent } from './categories-main/categories-main.component'
 import { SingleCategoryComponent } from './single-category/single-category.component'
+import {MidSectionHomepageComponent} from './mid-section-homepage/mid-section-homepage.component'
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'test', component: TestComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'home/mid', component: MidSectionHomepageComponent },
   { path: 'categories', component: CategoriesMainComponent },
   { path: 'categories/foreignlanguages', component: SingleCategoryComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' }

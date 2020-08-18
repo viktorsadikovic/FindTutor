@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { Customer } from './customer.model'
+import { Customer } from './customer.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
