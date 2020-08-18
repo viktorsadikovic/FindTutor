@@ -20,6 +20,9 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AccordionAllModule } from '@syncfusion/ej2-angular-navigations';
 import { MidSectionHomepageComponent } from './mid-section-homepage/mid-section-homepage.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { CardSliderComponent } from './card-slider/card-slider.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { MidSectionHomepageComponent } from './mid-section-homepage/mid-section-
     RegisterComponent,
     RegisterTutorComponent,
     RegisterUserComponent,
-    MidSectionHomepageComponent
+    MidSectionHomepageComponent,
+    AboutUsComponent,
+    ContactComponent,
+    CardSliderComponent
   ],
   imports: [
     BrowserModule,
