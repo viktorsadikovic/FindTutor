@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="row my-3">
-      <div class="col-md-4 categories-card" [routerLink]="['/']">
+      <div class="col-md-4 categories-card" [routerLink]="['/categories', art]">
           <div class="card text-center">
               <div class="card-block">
                   <h4 class="card-title">Ликовна уметност</h4>
@@ -9,7 +9,7 @@
               </div>
           </div>
       </div>
-      <div class="col-md-4 categories-card" [routerLink]="['/categories/foreignlanguages']">
+      <div class="col-md-4 categories-card" [routerLink]="['/categories', languages]">
           <div class="card text-center">
               <div class="card-block">
                   <h4 class="card-title">Странски јазици</h4>
@@ -18,7 +18,7 @@
 
           </div>
       </div>
-      <div class="col-md-4 categories-card">
+      <div class="col-md-4 categories-card" [routerLink]="['/categories', maths]">
           <div class="card text-center">
               <div class="card-block">
                   <h4 class="card-title">Математика</h4>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="row my-3">
-    <div class="col-md-4 categories-card">
+    <div class="col-md-4 categories-card" [routerLink]="['/categories', it]">
         <div class="card text-center">
             <div class="card-block">
                 <h4 class="card-title">ИТ</h4>
@@ -39,7 +39,7 @@
 
         </div>
     </div>
-    <div class="col-md-4 categories-card">
+    <div class="col-md-4 categories-card" [routerLink]="['/categories', music]">
         <div class="card text-center">
             <div class="card-block">
                 <h4 class="card-title">Музика</h4>

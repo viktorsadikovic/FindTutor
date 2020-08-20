@@ -8,11 +8,11 @@
   <div class="card-text">
 
     <div class="title-total">
-      <div class="title">{{element?.Tutor}}</div>
-      <div class="title2">{{element?.Date}}</div>
-      <h2>{{element?.Name}}</h2>
+      <div class="title">{{element?.price | currency: 'МКД'}}</div>
+      <div class="title2">{{element?.date | date}}</div>
+      <h2>{{element?.title}}</h2>
 
-  <div class="desc">Здраво ја сум Фичо од Белгија, дојдете да ве научам француски бакиии.</div>
+  <div class="desc">{{element?.description}}</div>
   <div class="actions">
     <button><i class="far fa-heart"></i></button>
     <button><i class="far fa-envelope"></i></button>

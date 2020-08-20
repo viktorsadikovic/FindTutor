@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'home/mid', component: MidSectionHomepageComponent },
   { path: 'categories', component: CategoriesMainComponent },
-  { path: 'categories/foreignlanguages', component: SingleCategoryComponent },
+  { path: 'categories/:type', component: SingleCategoryComponent},
   { path: 'about-us', component: AboutUsComponent },
   { path: 'home/card-slider', component: CardSliderComponent },
   { path: 'contact', component: ContactComponent },
