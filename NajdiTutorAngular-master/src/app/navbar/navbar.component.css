@@ -8,13 +8,4 @@
 .navbar-dark .navbar-nav .nav-link:active{
 
 }
-
-#navbarSupportedContent > ul.navbar-nav.mr-4 > li:nth-child(5){
-    background-color: dimgrey!important;
-    border-radius: 8px;
-    padding-right: 10px;
-}
-#navbarSupportedContent > ul.navbar-nav.mr-4 > li:nth-child(6){
-    background-color: dimgrey!important;
-    border-radius: 8px;
-}
+        

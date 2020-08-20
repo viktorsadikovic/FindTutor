@@ -11,3 +11,9 @@
   transform: translateY(-1.5rem) scale(1.03);
   cursor: pointer;
 }
+
+.categories-custom {
+
+    margin-top: 6% ;
+    margin-bottom: 6%;
+} 
