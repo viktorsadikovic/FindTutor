@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container categories-custom">
 
   <div class="row my-3">
-      <div class="col-md-4 categories-card" [routerLink]="['/']">
-          <div class="card text-center">
+      <div class="col-md-4 categories-card" [routerLink]="['/categories', art]">
+          <div class="card text-center blue-card">
               <div class="card-block">
                   <h4 class="card-title">Ликовна уметност</h4>
                   <h2><i class="fas fa-paint-brush fa-3x"></i></h2>
               </div>
           </div>
       </div>
-      <div class="col-md-4 categories-card" [routerLink]="['/categories/foreignlanguages']">
-          <div class="card text-center">
+      <div class="col-md-4 categories-card " [routerLink]="['/categories', languages]">
+          <div class="card text-center red-card">
               <div class="card-block">
                   <h4 class="card-title">Странски јазици</h4>
                   <h2><i class="fas fa-book fa-3x"></i></h2>
@@ -18,8 +18,8 @@
 
           </div>
       </div>
-      <div class="col-md-4 categories-card">
-          <div class="card text-center">
+      <div class="col-md-4 categories-card " [routerLink]="['/categories', maths]">
+          <div class="card text-center yellow-card">
               <div class="card-block">
                   <h4 class="card-title">Математика</h4>
                   <h2><i class="fas fa-square-root-alt fa-3x"></i></h2>
@@ -30,8 +30,8 @@
   </div>
 
   <div class="row my-3">
-    <div class="col-md-4 categories-card">
-        <div class="card text-center">
+    <div class="col-md-4 categories-card" [routerLink]="['/categories', it]">
+        <div class="card text-center  green-card">
             <div class="card-block">
                 <h4 class="card-title">ИТ</h4>
                 <h2><i class="fas fa-code fa-3x"></i></h2>
@@ -39,8 +39,8 @@
 
         </div>
     </div>
-    <div class="col-md-4 categories-card">
-        <div class="card text-center">
+    <div class="col-md-4 categories-card" [routerLink]="['/categories', music]">
+        <div class="card text-center turqoise-card">
             <div class="card-block">
                 <h4 class="card-title">Музика</h4>
                 <h2><i class="fas fa-music fa-3x"></i></h2>
@@ -48,11 +48,11 @@
 
         </div>
     </div>
-    <div class="col-md-4 categories-card">
-        <div class="card text-center card-info">
+    <div class="col-md-4 categories-card" [routerLink]="['/categories', science]">
+        <div class="card text-center grey-card">
             <div class="card-block">
-                <h4 class="card-title">Big Savings</h4>
-                <h2><i class="fa fa-coffee fa-3x"></i></h2>
+                <h4 class="card-title">Наука</h4>
+                <h2><i class="fas fa-flask fa-3x"></i></h2>
             </div>
 
         </div>
