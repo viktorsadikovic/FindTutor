@@ -13,15 +13,14 @@ namespace FindTutor.Models
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Tutor> Tutors { get; set; }
 
-
         public DatabaseDB()
         {
+
         }
 
         public static DatabaseDB Create()
         {
             return new DatabaseDB();
         }
-
     }
 }

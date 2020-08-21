@@ -95,6 +95,16 @@ namespace FindTutor.Controllers
                 return NotFound();
             }
 
+            var controllerA = new AnnouncementsController();
+
+            db.Announcements.ToList().ForEach(announcement =>
+            {
+                if (announcement.Tutor == tutor)
+                {
+                    controllerA.DeleteAnnouncement(announcement.Id);
+                }
+            });
+
             db.Tutors.Remove(tutor);
             db.SaveChanges();
 

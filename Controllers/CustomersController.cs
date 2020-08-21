@@ -90,10 +90,21 @@ namespace FindTutor.Controllers
         public IHttpActionResult DeleteCustomer(int id)
         {
             Customer customer = db.Customers.Find(id);
+
             if (customer == null)
             {
                 return NotFound();
             }
+
+            var controller = new ReviewsController();
+
+            db.Reviews.ToList().ForEach(review =>
+            {
+                if (review.Submitter == customer)
+                {
+                    controller.DeleteReview(review.Id);
+                }
+            });
 
             db.Customers.Remove(customer);
             db.SaveChanges();

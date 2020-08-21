@@ -30,6 +30,9 @@ namespace FindTutor.Models
         [Display(Name = "Profesionalno zanimanje")]
         public string Job { get; set; }
 
+        // [Display(Name = "Slika na profil")]
+        // public virtual Image ProfilePicture { get; set; }
+
         public float Score { get; set; }
 
         public virtual List<Announcement> PrivateLessons { get; set; }

@@ -54,6 +54,30 @@ namespace FindTutor.Controllers
             try
             {
                 db.SaveChanges();
+
+                Review updatedReview = db.Reviews.Find(id);
+
+                db.Customers.ToList().ForEach(customer =>
+                {
+                    customer.Reviews.ForEach(r =>
+                    {
+                        if (r.Id == id)
+                        {
+                            r = updatedReview;
+                        }
+                    });
+                });
+
+                db.Tutors.ToList().ForEach(tutor =>
+                {
+                    tutor.Reviews.ForEach(r =>
+                    {
+                        if (r.Id == id)
+                        {
+                            r = updatedReview;
+                        }
+                    });
+                });
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,6 +103,8 @@ namespace FindTutor.Controllers
                 return BadRequest(ModelState);
             }
 
+            review.Submitter.Reviews.Add(review);
+            review.Tutor.Reviews.Add(review);
             db.Reviews.Add(review);
             db.SaveChanges();
 
@@ -95,6 +121,8 @@ namespace FindTutor.Controllers
                 return NotFound();
             }
 
+            review.Submitter.Reviews.Remove(review);
+            review.Tutor.Reviews.Remove(review);
             db.Reviews.Remove(review);
             db.SaveChanges();
 

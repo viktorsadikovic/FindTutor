@@ -22,5 +22,13 @@ namespace FindTutor.Models
 
         [Display(Name = "Email adresa")]
         public string Email { get; set; }
+
+        // [Display(Name = "Slika na profil")]
+        // public virtual Image ProfilePicture { get; set; }
+
+        [Display(Name = "Omileni oglasi")]
+        public virtual List<Announcement> FavoriteAnnouncements { get; set; }
+
+        public virtual List<Review> Reviews { get; set; }
     }
 }

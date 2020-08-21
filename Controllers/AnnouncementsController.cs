@@ -8,7 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Mvc;
 using FindTutor.Models;
+using Microsoft.Ajax.Utilities;
 
 namespace FindTutor.Controllers
 {
@@ -54,6 +56,27 @@ namespace FindTutor.Controllers
             try
             {
                 db.SaveChanges();
+                
+                Announcement updatedAnnouncement = db.Announcements.Find(id);
+
+                updatedAnnouncement.Tutor.PrivateLessons.ForEach(lesson =>
+                {
+                    if (lesson.Id == id)
+                    {
+                        lesson = updatedAnnouncement;
+                    }
+                });
+
+                db.Customers.ToList().ForEach(customer =>
+                {
+                    customer.FavoriteAnnouncements.ForEach(a =>
+                    {
+                        if (a.Id == id)
+                        {
+                            a = updatedAnnouncement;
+                        }
+                    });
+                });
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,6 +102,7 @@ namespace FindTutor.Controllers
                 return BadRequest(ModelState);
             }
 
+            announcement.Tutor.PrivateLessons.Add(announcement);
             db.Announcements.Add(announcement);
             db.SaveChanges();
 
@@ -94,6 +118,29 @@ namespace FindTutor.Controllers
             {
                 return NotFound();
             }
+
+            announcement.Tutor.PrivateLessons.Remove(announcement);
+
+            db.Customers.ToList().ForEach(customer =>
+            {
+                customer.FavoriteAnnouncements.ForEach(a =>
+                {
+                    if (a.Id == id)
+                    {
+                        customer.FavoriteAnnouncements.Remove(a);
+                    }
+                });
+            });
+
+            var controller = new ReviewsController();
+
+            db.Reviews.ToList().ForEach(review =>
+            {
+                if (review.PrivateLesson.Id == id)
+                {
+                    controller.DeleteReview(review.Id);
+                }
+            });
 
             db.Announcements.Remove(announcement);
             db.SaveChanges();
