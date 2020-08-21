@@ -6,7 +6,7 @@ export interface Announcement {
   difficulty: string,
   description: string,
   score: number,
-  date: Date
+  date: string
 }
 
 export interface Tutor {

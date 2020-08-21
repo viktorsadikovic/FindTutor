@@ -1,45 +1,39 @@
 <div class="container single-category-custom">
-  <ejs-accordion expandMode='Multiple'>
-    <e-accordionitems>
-      <e-accordionitem>
-        <ng-template #header>
-          <h3>Beginner</h3>
-        </ng-template>
-        <ng-template #content class="accordion-main">
-          <div class="aooo">
+  <h1>{{categoryTitle}}</h1>
 
-            <app-announcement-thumbnail [niza]="beginner_level"></app-announcement-thumbnail>
+  <div class="filters">
 
-              <p></p>
-            </div>
-        </ng-template>
-      </e-accordionitem>
-      <e-accordionitem>
-        <ng-template #header>
-          <h3>Intermediate</h3>
-        </ng-template>
-        <ng-template #content class="accordion-main">
-          <div class="aooo">
+    <div class="lista filter">
+        <label>Филтрирај по ниво:</label>
+        <select [(ngModel)]="selectedLevel" (change)="selectedLvl()" class="custom-select">
+          <option value="All">All</option>
+          <option value="Beginner" >Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+    </div>
 
-            <app-announcement-thumbnail [niza]="intermediate_level"></app-announcement-thumbnail>
+    <div class="lista sort">
+      <label>Сортирај по:</label>
+      <select [(ngModel)]="selectedFilter" (change)="selectedLvl()" class="custom-select">
+        <option value="None">None</option>
+        <option value="AlphabeticalAsc">Азбучен ред (А-З)</option>
+        <option value="AlphabeticalDesc">Азбучен ред (3-А)</option>
+        <option value="PriceAsc" >Цена (растечки)</option>
+        <option value="PriceDesc" >Цена (опаѓачки)</option>
+        <option value="DateAsc" >Датум (најнови)</option>
+        <option value="DateDesc" >Датум (најстари)</option>
+      </select>
+    </div>
+    <div class="lista search">
+      <label>Пребарај:</label>
+      <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Announcements" >
+    </div>
 
-              <p></p>
-            </div>
-        </ng-template>
-      </e-accordionitem>
-      <e-accordionitem>
-        <ng-template #header>
-          <h3>Advanced</h3>
-        </ng-template>
-        <ng-template #content>
+  </div>
+  <app-announcement-thumbnail [announcements]="announcements" [searchTerm]="searchTerm" [sortType]="selectedFilter" [filterLevel]="selectedLevel" ></app-announcement-thumbnail>
 
-          <app-announcement-thumbnail [niza]="advanced_level"></app-announcement-thumbnail>
 
-          <p></p>
-        </ng-template>
-      </e-accordionitem>
-    </e-accordionitems>
-  </ejs-accordion>
 
  </div>
 

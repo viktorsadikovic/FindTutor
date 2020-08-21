@@ -1,5 +1,5 @@
 .single-category-custom{
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 150px;
 }
 
@@ -152,4 +152,27 @@ button:hover{
 #slika{
   width: 98px;
   border-radius: 130px;
+}
+
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.filter{
+  flex-grow: 1;
+  margin-right: 3%;
+}
+
+.sort {
+  flex-grow: 1;
+  margin-right: 3%;
+
+}
+
+.search{
+  flex-grow: 3;
 }

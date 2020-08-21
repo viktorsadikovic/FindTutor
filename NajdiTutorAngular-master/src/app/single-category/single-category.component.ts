@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Announcement } from '../shared/appmodels.model';
 import { DataService } from '../shared/dataservice.service';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -9,14 +9,46 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./single-category.component.css']
 })
 export class SingleCategoryComponent implements OnInit {
-  announcements: Announcement[]
-  beginner_level: Announcement[]
-  intermediate_level: Announcement[]
-  advanced_level: Announcement[]
+  announcements: Announcement[];
+
+  selectedLevel = "All";
+  selectedFilter = "None";
+  searchTerm = "";
+  categoryTitle;
 
   constructor(private service: DataService, private route: ActivatedRoute) { }
 
+  pageTitle
+
   ngOnInit(): void {
+
+    this.route.params.forEach((params: Params) => {
+      this.categoryTitle = params['type'];
+
+      switch (this.categoryTitle) {
+        case "maths":
+          this.categoryTitle = "Математика";
+          break;
+        case "languages":
+          this.categoryTitle = "Јазици";
+          break;
+        case "art":
+          this.categoryTitle = "Ликовна уметност";
+            break;
+        case "music":
+          this.categoryTitle = "Музичка уметност";
+            break;
+        case "science":
+          this.categoryTitle = "Наука";
+            break;
+        case "it":
+          this.categoryTitle = "Информатички технологии";
+            break;
+        default:
+          this.categoryTitle = "";
+            break;
+    }
+    })
 
     this.route.params.forEach((params: Params) => {
       this.service.getAnnouncements().subscribe( data => {
@@ -25,21 +57,18 @@ export class SingleCategoryComponent implements OnInit {
         this.announcements = data.filter( array => {
           return array.field.toLocaleLowerCase() == params['type'];
         });
+        console.log(this.announcements)
 
-        this.beginner_level = this.announcements.filter( array => {
-          return array.difficulty.toLocaleLowerCase() == "beginner"
-        });
 
-        this.intermediate_level = this.announcements.filter( array => {
-          return array.difficulty.toLocaleLowerCase() == "intermediate"
-        });
-
-        this.advanced_level = this.announcements.filter( array => {
-          return array.difficulty.toLocaleLowerCase() == "advanced"
-        });
       })
     })
 
+  }
+
+  selectedLvl(){
+    // console.log(this.selectedLevel)
+    // console.log(this.selectedFilter)
+    // console.log(this.announcements)
   }
 
 

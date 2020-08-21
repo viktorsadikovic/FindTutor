@@ -17,6 +17,7 @@ export class CategoriesMainComponent implements OnInit {
   it = "it"
   art = "art"
   music = "music"
+  science = "science"
 
   ngOnInit(): void {
   }

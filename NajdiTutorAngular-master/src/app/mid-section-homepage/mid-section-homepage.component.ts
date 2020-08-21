@@ -19,14 +19,14 @@ export class MidSectionHomepageComponent implements OnInit {
       if (i >= chasovi.length) {
         i = 0;
       }
-      $('h1').fadeOut(1000, function(){
+      $('#skripta').fadeOut(1000, function(){
         $(this).text(chasovi[i]);
       });
       $('h1').fadeIn();
       i++;
     }
     $(document).ready(function() {
-      $('h1').text(chasovi[i++]); // initialize with first quote
+      $('#skripta').text(chasovi[i++]); // initialize with first quote
       setInterval(quoteTimer, 4000);
     });
   }
