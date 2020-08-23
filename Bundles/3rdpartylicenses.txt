@@ -4,6 +4,9 @@ MIT
 @angular/core
 MIT
 
+@angular/forms
+MIT
+
 @angular/platform-browser
 MIT
 
@@ -47,6 +50,36 @@ trademarks does not indicate endorsement of the trademark holder by Font
 Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
+
+@syncfusion/ej2-angular-base
+SEE LICENSE IN license
+
+@syncfusion/ej2-angular-navigations
+SEE LICENSE IN license
+
+@syncfusion/ej2-base
+SEE LICENSE IN license
+
+@syncfusion/ej2-buttons
+SEE LICENSE IN license
+
+@syncfusion/ej2-data
+SEE LICENSE IN license
+
+@syncfusion/ej2-inputs
+SEE LICENSE IN license
+
+@syncfusion/ej2-lists
+SEE LICENSE IN license
+
+@syncfusion/ej2-navigations
+SEE LICENSE IN license
+
+@syncfusion/ej2-popups
+SEE LICENSE IN license
+
+@syncfusion/ej2-splitbuttons
+SEE LICENSE IN license
 
 angular2-counto
 MIT
