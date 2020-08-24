@@ -13,9 +13,13 @@ export class AnnouncementThumbnailComponent implements OnChanges {
   @Input() filterLevel;
   @Input() sortType;
   @Input() searchTerm;
+  stars = [1,2,3,4,5]
+  rating = 0;
+  hoverState = 0;
 
   constructor() {
   }
+
 
   ngOnChanges(): void {
     console.log(this.filterLevel)

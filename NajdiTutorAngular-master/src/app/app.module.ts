@@ -23,7 +23,9 @@ import { MidSectionHomepageComponent } from './mid-section-homepage/mid-section-
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { CardSliderComponent } from './card-slider/card-slider.component';
-import { DataService } from './shared/dataservice.service'
+import { DataService } from './shared/dataservice.service';
+import { AnnouncementDetailsComponent } from './announcement-details/announcement-details.component';
+import { StarComponent } from './star/star.component'
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { DataService } from './shared/dataservice.service'
     MidSectionHomepageComponent,
     AboutUsComponent,
     ContactComponent,
-    CardSliderComponent
+    CardSliderComponent,
+    AnnouncementDetailsComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

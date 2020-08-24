@@ -1,4 +1,5 @@
 export interface Announcement {
+  id: number,
   tutor : Tutor,
   field: string,
   title: string,

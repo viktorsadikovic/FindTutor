@@ -17,7 +17,8 @@ body {
   display: inline-block;
   flex-direction: column;
   border-radius: 25px;
-  margin: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
   /* position: relative; */
 }
 .card h2 {
@@ -119,4 +120,11 @@ button:hover{
 #slika{
   width: 98px;
   border-radius: 130px;
+}
+.stars {
+  width: 160px;
+}
+
+.star-rating-filled {
+  width: 25px;
 }

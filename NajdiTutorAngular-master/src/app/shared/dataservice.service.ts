@@ -13,6 +13,10 @@ export class DataService {
     return this.http.get<Announcement[]>(this.url + "Announcements");
   }
 
+  getAnnouncement(id: number){
+    return this.http.get<Announcement>(this.url + "Announcements/" + id);
+  }
+
   getTutors(){
     return this.http.get<Tutor[]>(this.url + "Tutors");
   }
@@ -40,8 +44,10 @@ export class DataService {
     this.http.post<Tutor>(this.url + "Tutors", newTutor, options).subscribe()
   }
 
-  addReview(){
 
+
+  addReview(){
+    // this.http.put<Review>()
   }
 
   deleteAnnouncement(id){

@@ -9,6 +9,7 @@ import {MidSectionHomepageComponent} from './mid-section-homepage/mid-section-ho
 import {AboutUsComponent} from './about-us/about-us.component'
 import {ContactComponent} from './contact/contact.component'
 import {CardSliderComponent} from './card-slider/card-slider.component'
+import { AnnouncementDetailsComponent } from './announcement-details/announcement-details.component'
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'home/mid', component: MidSectionHomepageComponent },
   { path: 'categories', component: CategoriesMainComponent },
   { path: 'categories/:type', component: SingleCategoryComponent},
+  { path: 'categories/:type/:id', component: AnnouncementDetailsComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'home/card-slider', component: CardSliderComponent },
   { path: 'contact', component: ContactComponent },
